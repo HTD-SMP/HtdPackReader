@@ -49,9 +49,9 @@ public class HtdPackV1 {
         @SerializedName("curse_id")
         public final String id;
         @SerializedName("curse_slug")
-        private final String slug;
+        public final String slug;
         @SerializedName("curse_file_id")
-        private final String fileId;
+        public final String fileId;
 
         public CurseMod(String id, String slug, String version, String fileId) {
             super(Mod.HostedOn.CURSEFORGE, "https://www.curseforge.com/minecraft/mc-mods/" + slug, version);
@@ -63,11 +63,11 @@ public class HtdPackV1 {
 
     public static class ModrinthMod extends Mod {
         @SerializedName("modrinth_slug")
-        private final String slug;
+        public final String slug;
         @SerializedName("modrinth_id")
-        private final String id;
+        public final String id;
         @SerializedName("modrinth_file_name")
-        private final String fileName;
+        public final String fileName;
 
         public ModrinthMod(String id, String slug, String version, String fileName) {
             super(HostedOn.MODRINTH, "https://modrinth.com/mod/" + slug, version);
