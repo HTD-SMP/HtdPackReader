@@ -1,6 +1,5 @@
 package com.github.htd_smp.htd_pack_reader;
 
-import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.SerializedName;
 
@@ -17,6 +16,8 @@ public class HtdPackV1 {
     public final String r_version = "v1";
     @SerializedName("version")
     public final String version;
+    @SerializedName("pack_version")
+    public final String pack_version;
 
     public enum ModLoader {
         FORGE,
@@ -77,10 +78,11 @@ public class HtdPackV1 {
         }
     }
 
-    public HtdPackV1(List<Mod> mods, ModLoader loader, String version) {
+    public HtdPackV1(List<Mod> mods, ModLoader loader, String version, String pack_version) {
         this.mods = mods;
         this.loader = loader;
         this.version = version;
+        this.pack_version = pack_version;
     }
 
     public ModLoader getLoader() {
