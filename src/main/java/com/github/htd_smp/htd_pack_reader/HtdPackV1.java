@@ -91,9 +91,7 @@ public class HtdPackV1 {
         return new ArrayList<>(mods);
     }
 
-    Gson gson = new GsonBuilder().setPrettyPrinting().create();
-
     public String toJson() {
-        return gson.toJson(this);
+        return new GsonBuilder().setPrettyPrinting().create().toJson(this);
     }
 }
