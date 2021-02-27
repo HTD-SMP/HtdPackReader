@@ -92,6 +92,6 @@ public class HtdPackV1 {
     }
 
     public String toJson() {
-        return new GsonBuilder().setPrettyPrinting().create().toJson(this);
+        return new GsonBuilder().setPrettyPrinting().create().toJson(this, this.getClass());
     }
 }
